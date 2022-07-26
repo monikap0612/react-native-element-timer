@@ -172,13 +172,13 @@ const TimerComponent = React.forwardRef<any, TimerProps>((props, ref) => {
       } else {
         if (minute > 0) {
           return (
-            <Text style={[styles.text, textStyle, font()]}>{`${minute}:${
+            <Text style={[styles.text, textStyle, font()]}>{`${hours}:${minute}:${
               seconds.toString().length === 1 ? '0' : ''
             }${seconds}`}</Text>
           );
         } else {
           return (
-            <Text style={[styles.text, textStyle, font()]}>{`${seconds}`}</Text>
+            <Text style={[styles.text, textStyle, font()]}>{`${hours}:${minute}:${seconds}`}</Text>
           );
         }
       }
